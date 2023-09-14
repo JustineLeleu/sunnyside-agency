@@ -1,0 +1,31 @@
+// Mixins
+@mixin button-learnMore-underline($color)
+{
+    border: solid $color 5px;
+}
+
+@mixin main_cards($color, $background)
+{
+    .main_cards-background
+    {
+        background-image: $background;
+    }
+
+    .main_cards-content
+    {
+        color: $color;
+    }
+}
+
+@mixin mask-icons($img)
+{
+    width: 20px;
+    aspect-ratio: 1/1;
+    background-color: $darkModerateCyan;
+    -webkit-mask-image: url($img);
+    mask-image: url($img);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat; 
+    mask-size: contain;
+    mask-position: center;
+}

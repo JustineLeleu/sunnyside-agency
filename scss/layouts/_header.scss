@@ -1,0 +1,33 @@
+// Header
+.header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img
+    {
+        margin-left: 10%;
+    }
+
+    .header_nav
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10%;
+        display: none;
+
+        li
+        {
+            list-style: none;
+            margin-left: 20px;
+        }
+    }
+}
+

@@ -1,0 +1,374 @@
+/*
+This file is used to contain all vendor imports.
+*/
+@import url(github.com/necolas/normalize.css/);
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap");
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
+* {
+  margin: 0;
+}
+
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating to a reusable component.
+*/
+.button-learnMore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-learnMore .button-learnMore_text {
+  color: hsl(212, 27%, 19%);
+  font-family: Fraunces;
+  font-size: 20px;
+}
+.button-learnMore .button-learnMore_underline {
+  border-radius: 25px;
+  opacity: 0.2;
+  margin-top: -8px;
+  width: 105%;
+  z-index: -1;
+}
+
+.red .button-learnMore_underline {
+  border: solid hsl(7, 99%, 70%) 5px;
+}
+
+.yellow .button-learnMore_underline {
+  border: solid hsl(51, 100%, 49%) 5px;
+}
+
+/*
+This file is used to contain all component imports.
+Files inside this folder can contain specific element styles and layout. 
+*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header img {
+  margin-left: 10%;
+}
+.header .header_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+  display: none;
+}
+.header .header_nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.section-title {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.section-title .section-title_background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../assets/images/photos/image-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.section-title .section-title_content {
+  padding-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.section-title .section-title_content h1 {
+  color: hsl(0, 0%, 100%);
+  font-family: Fraunces;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.section-title .section-title_content img {
+  width: 50px;
+}
+
+.section-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.section-main .section-main_img {
+  max-width: 100vw;
+  height: 100%;
+}
+.section-main .section-main_img img {
+  max-width: 100vw;
+}
+.section-main .section-main_text {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.section-main .section-main_text h2 {
+  font-family: Fraunces;
+  font-size: 40px;
+  text-align: center;
+  color: hsl(212, 27%, 19%);
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+.section-main .section-main_text p {
+  font-family: Barlow;
+  font-size: 18px;
+  text-align: center;
+  color: hsl(232, 10%, 55%);
+  font-weight: 800;
+  line-height: 1.5;
+}
+.section-main .section-main_text .button-learnMore {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.section-main .section-main_cards {
+  max-width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.section-main .section-main_cards .main_cards-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.section-main .section-main_cards .main_cards-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: 100vh;
+}
+.section-main .section-main_cards .main_cards-content h2 {
+  font-family: Fraunces;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-main .section-main_cards .main_cards-content p {
+  font-family: Barlow;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 1.5;
+}
+.section-main .cerise .main_cards-background {
+  background-image: url(../assets/images/photos/image-graphic-design.jpg);
+}
+.section-main .cerise .main_cards-content {
+  color: hsl(167, 40%, 24%);
+}
+.section-main .orange .main_cards-background {
+  background-image: url(../assets/images/photos/image-photography.jpg);
+}
+.section-main .orange .main_cards-content {
+  color: hsl(198, 62%, 26%);
+}
+
+.section-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+.section-comments h2 {
+  font-family: Fraunces;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(210, 4%, 67%);
+}
+.section-comments .section-comments_container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  gap: 60px;
+}
+.section-comments .section-comments_container .section-comments_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-comments .section-comments_container .section-comments_card img {
+  border-radius: 50%;
+  width: 100px;
+}
+.section-comments .section-comments_container .section-comments_card p {
+  font-family: Barlow;
+  font-size: 18px;
+  text-align: center;
+  color: hsl(232, 10%, 55%);
+  font-weight: 800;
+  line-height: 1.5;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.section-comments .section-comments_container .section-comments_card h3 {
+  font-family: Fraunces;
+  font-size: 20px;
+  color: hsl(212, 27%, 19%);
+  margin-bottom: 10px;
+}
+.section-comments .section-comments_container .section-comments_card h4 {
+  font-family: Barlow;
+  font-size: 15px;
+  color: hsl(210, 4%, 67%);
+}
+
+.section-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.section-gallery img {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer {
+  background-color: rgb(144, 212, 197);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.footer .mask-logo {
+  width: 200px;
+  height: 100px;
+  background-color: hsl(168, 34%, 41%);
+  -webkit-mask-image: url(../assets/images/logo.svg);
+  mask-image: url(../assets/images/logo.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+.footer .footer_nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 10%;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+.footer .footer_nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+.footer .footer_nav li a {
+  color: hsl(168, 34%, 41%);
+  text-decoration: none;
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 900;
+}
+.footer .footer_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20%;
+}
+.footer .footer_links li {
+  list-style: none;
+  margin-left: 40px;
+}
+.footer .footer_links li .mask1 {
+  width: 20px;
+  aspect-ratio: 1/1;
+  background-color: hsl(168, 34%, 41%);
+  -webkit-mask-image: url("../assets/images/icons/icon-facebook.svg");
+  mask-image: url("../assets/images/icons/icon-facebook.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+.footer .footer_links li .mask2 {
+  width: 20px;
+  aspect-ratio: 1/1;
+  background-color: hsl(168, 34%, 41%);
+  -webkit-mask-image: url("../assets/images/icons/icon-instagram.svg");
+  mask-image: url("../assets/images/icons/icon-instagram.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+.footer .footer_links li .mask3 {
+  width: 20px;
+  aspect-ratio: 1/1;
+  background-color: hsl(168, 34%, 41%);
+  -webkit-mask-image: url("../assets/images/icons/icon-twitter.svg");
+  mask-image: url("../assets/images/icons/icon-twitter.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+.footer .footer_links li .mask4 {
+  width: 20px;
+  aspect-ratio: 1/1;
+  background-color: hsl(168, 34%, 41%);
+  -webkit-mask-image: url("../assets/images/icons/icon-pinterest.svg");
+  mask-image: url("../assets/images/icons/icon-pinterest.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}/*# sourceMappingURL=style.css.map */
