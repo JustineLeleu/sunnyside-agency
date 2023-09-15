@@ -2,31 +2,28 @@
 .header
 {
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @extend %header-size;
+    @extend %header-menu;
 
     img
     {
-        margin-left: 10%;
+        margin-left: 5%;
     }
 
-    .header_nav
+    .header_burger-button
     {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-right: 10%;
-        display: none;
 
-        li
+        img
         {
-            list-style: none;
-            margin-left: 20px;
+            width: 20px;
         }
     }
 }

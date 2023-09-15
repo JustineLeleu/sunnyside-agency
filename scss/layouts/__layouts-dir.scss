@@ -4,9 +4,20 @@ Files inside this folder can contain specific element styles and layout.
 */
 
 //Import Layout files
-@import "header";
+@import "header/header";
+@import "header/header-nav";
+@import "header/header-burger-menu";
+
 @import "section-title";
-@import "section-main";
-@import "section-comments";
+
+@import "section-main/section-main";
+@import "section-main/section-main-cards";
+
+@import "section-comments/section-comments";
+@import "section-comments/section-comments-container";
+
 @import "section-gallery";
-@import "footer";
+
+@import "footer/footer";
+@import "footer/footer-nav";
+@import "footer/footer-links";

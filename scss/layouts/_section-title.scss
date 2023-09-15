@@ -25,21 +25,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 60px;
+        @extend %title-size;
 
         h1
         {
             color: $white;
             font-family: Fraunces;
-            font-size: 36px;
             text-transform: uppercase;
             text-align: center;
-            letter-spacing: 5px;
-        }
-
-        img 
-        {
-            width: 50px;
+            letter-spacing: 8px;
         }
     }
 }

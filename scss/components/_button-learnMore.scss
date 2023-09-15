@@ -9,7 +9,8 @@
     {
         color: $veryDarkDesaturatedBlue;
         font-family: Fraunces;
-        font-size: 20px;
+        font-size: 15px;
+        text-decoration: none;
     }
     
     .button-learnMore_underline
@@ -35,5 +36,13 @@
     .button-learnMore_underline
     {
         @include button-learnMore-underline($yellow);
+    }
+}
+
+.button-learnMore:hover
+{
+    .button-learnMore_underline
+    {
+        opacity: 1;
     }
 }

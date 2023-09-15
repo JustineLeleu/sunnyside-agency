@@ -1,0 +1,53 @@
+.footer_links
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 164px;
+    padding: 0;
+
+    li
+    {
+        list-style: none;
+
+        .mask1
+        {
+            @include mask-icons("../assets/images/icons/icon-facebook.svg", $darkModerateCyan);
+        }
+
+        .mask2
+        {
+            @include mask-icons("../assets/images/icons/icon-instagram.svg", $darkModerateCyan);
+        }
+
+        .mask3
+        {
+            @include mask-icons("../assets/images/icons/icon-twitter.svg", $darkModerateCyan);
+        }
+
+        .mask4
+        {
+            @include mask-icons("../assets/images/icons/icon-pinterest.svg", $darkModerateCyan);
+        }
+
+        .mask1:hover
+        {
+            @include mask-icons("../assets/images/icons/icon-facebook.svg", $white);
+        }
+
+        .mask2:hover
+        {
+            @include mask-icons("../assets/images/icons/icon-instagram.svg", $white);
+        }
+
+        .mask3:hover
+        {
+            @include mask-icons("../assets/images/icons/icon-twitter.svg", $white);
+        }
+
+        .mask4:hover
+        {
+            @include mask-icons("../assets/images/icons/icon-pinterest.svg", $white);
+        }
+    }
+}

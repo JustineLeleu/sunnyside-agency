@@ -2,13 +2,11 @@
 .section-gallery
 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    @extend %gallery-columns;
 
     img 
     {
         max-width: 100%;
-        aspect-ratio: 1/1;
         object-fit: cover;
     }
 }

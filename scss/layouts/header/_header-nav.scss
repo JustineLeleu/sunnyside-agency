@@ -1,0 +1,45 @@
+.header_nav
+{
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+
+    li
+    {
+        list-style: none;
+        margin-left: 20px;
+        
+        a 
+        {
+            color: $white;
+            text-decoration: none;
+            font-family: Barlow;
+            font-size: 18px;
+        }
+    }
+
+    .header_nav-contact
+    {
+        background-color: $white;
+        border-radius: 25px;
+        padding: 5% 10%;
+
+        a 
+        {
+            color: $veryDarkDesaturatedBlue;
+            font-family: Fraunces;
+            font-size: 15px;
+        }
+    }
+
+    .header_nav-contact:hover
+    {
+        background-color: $transparentWhite;
+        border-radius: 25px;
+
+        a 
+        {
+            color: $white;
+        }
+    }
+}

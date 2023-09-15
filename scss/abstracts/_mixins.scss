@@ -1,3 +1,228 @@
+// Media query
+$breakpoints: 
+(
+  "phone-down": 500px,
+  "tablet-up": 768px,
+  "tablet-down": 900px,
+  "desktop-up": 1024px,
+  "desktop-down": 1280px,
+  "widescreen-up": 1440px
+);
+
+@mixin media-min($_key)
+{
+    @media screen and (min-width: map-get($breakpoints, $_key))
+    {
+        &{@content;}
+    }
+}
+
+// Responsive header
+%header-menu
+{
+    .header_nav
+    {
+        display: none;
+    }
+
+    @include media-min("desktop-up")
+    {
+        .header_burger-button
+        {
+            display: none;
+        }
+
+        .header_nav
+        {
+            display: flex;
+        }
+    }
+}
+
+%header-size
+{
+    $size1: 120px;
+    $size2: 20px;
+
+    padding-top: $size2;
+
+    img
+    {
+        width: $size1;
+    }
+
+    @each $_key, $_value in $breakpoints
+    {
+        @include media-min($_key)
+        {
+            $size1: $size1 + 10px;
+            $size2: $size2 + 5px;
+            
+            padding-top: $size2;
+
+            img
+            {
+                width: $size1;
+            }
+        }
+    }
+}
+
+%title-size
+{
+    $size1: 40px;
+    $size2: 50px;
+    $offset: 60px;
+
+    gap: $offset;
+
+    h1
+    {
+        font-size: $size1;
+    }
+
+    img
+    {
+        width: $size2;
+    }
+
+    @each $_key, $_value in $breakpoints
+    {
+        @include media-min($_key)
+        {
+            $size1: $size1 + 3px;
+            $size2: $size2 - 2px;
+            $offset: $offset + 6px;
+
+            gap: $offset;
+
+            h1
+            {
+                font-size: $size1;
+            }
+
+            img
+            {
+                width: $size2;
+            }
+        }
+    }
+}
+
+// Responsive section main
+%main-columns
+{
+    grid-template-columns: 1fr;
+
+    @include media-min("desktop-up")
+    {
+        grid-template-columns: repeat(2, 1fr);
+
+        .section-main_text:first-of-type
+        {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .section-main_img:first-of-type
+        {
+            grid-column: 2;
+            grid-row: 1;
+        }
+    }
+}
+
+%main-size
+{
+    $size1: 32px;
+
+    h2 
+    {
+        font-size: $size1;
+    }
+
+    @each $_key, $_value in $breakpoints
+    {
+        @include media-min($_key)
+        {
+            $size1: $size1 + 2px;
+
+            h2 
+            {
+                font-size: $size1;
+            }
+        }
+    }
+}
+
+%main-cards-size
+{
+    $size1: 95%;
+
+    width: $size1;
+
+    @each $_key, $_value in $breakpoints
+    {
+        @include media-min($_key)
+        {
+            $size1: $size1 - 8%;
+
+            width: $size1;
+        }
+    }
+}
+
+// responsive comments
+%comments-columns
+{
+
+    @include media-min("desktop-up")
+    {
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+    }
+}
+
+%comments-size
+{
+    $size1: 16px;
+
+    font-size: $size1;
+
+    @each $_key, $_value in $breakpoints
+    {
+        @include media-min($_key)
+        {
+            $size1: $size1 + 0.2px;
+
+            font-size: $size1;
+        }
+    }
+}
+
+// responsive gallery
+%gallery-columns
+{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    img 
+    {
+        aspect-ratio: 1/1;
+    }
+
+    @include media-min("desktop-up")
+    {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+
+        img 
+        {
+            aspect-ratio: 0;
+        }
+    }
+}
+
 // Mixins
 @mixin button-learnMore-underline($color)
 {
@@ -17,11 +242,11 @@
     }
 }
 
-@mixin mask-icons($img)
+@mixin mask-icons($img, $color)
 {
     width: 20px;
     aspect-ratio: 1/1;
-    background-color: $darkModerateCyan;
+    background-color: $color;
     -webkit-mask-image: url($img);
     mask-image: url($img);
     -webkit-mask-repeat: no-repeat;

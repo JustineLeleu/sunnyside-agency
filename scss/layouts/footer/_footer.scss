@@ -1,0 +1,23 @@
+// Footer
+.footer
+{
+    background-color: $moderateCyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    .mask-logo
+    {
+        width: 170px;
+        height: 33px;
+        background-color: $darkModerateCyan;
+        -webkit-mask-image: url(../assets/images/logo.svg);
+        mask-image: url(../assets/images/logo.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat; 
+        mask-size: contain;
+        mask-position: center;
+    }
+}
