@@ -86,7 +86,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 @media screen and (min-width: 500px) {
   .section-title .section-title_content {
-    gap: 66px;
+    gap: 70px;
   }
   .section-title .section-title_content h1 {
     font-size: 43px;
@@ -97,7 +97,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 @media screen and (min-width: 768px) {
   .section-title .section-title_content {
-    gap: 72px;
+    gap: 80px;
   }
   .section-title .section-title_content h1 {
     font-size: 46px;
@@ -108,7 +108,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 @media screen and (min-width: 900px) {
   .section-title .section-title_content {
-    gap: 78px;
+    gap: 90px;
   }
   .section-title .section-title_content h1 {
     font-size: 49px;
@@ -119,7 +119,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 @media screen and (min-width: 1024px) {
   .section-title .section-title_content {
-    gap: 84px;
+    gap: 100px;
   }
   .section-title .section-title_content h1 {
     font-size: 52px;
@@ -130,7 +130,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 @media screen and (min-width: 1280px) {
   .section-title .section-title_content {
-    gap: 90px;
+    gap: 110px;
   }
   .section-title .section-title_content h1 {
     font-size: 55px;
@@ -141,7 +141,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 @media screen and (min-width: 1440px) {
   .section-title .section-title_content {
-    gap: 96px;
+    gap: 120px;
   }
   .section-title .section-title_content h1 {
     font-size: 58px;
@@ -154,6 +154,11 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 .section-main {
   grid-template-columns: 1fr;
 }
+.section-main .section-main_text {
+  align-items: center;
+  max-width: 100vw;
+  text-align: center;
+}
 @media screen and (min-width: 1024px) {
   .section-main {
     grid-template-columns: repeat(2, 1fr);
@@ -165,6 +170,11 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   .section-main .section-main_img:first-of-type {
     grid-column: 2;
     grid-row: 1;
+  }
+  .section-main .section-main_text {
+    align-items: start;
+    width: 445px;
+    text-align: left;
   }
 }
 
@@ -450,7 +460,7 @@ Files inside this folder can contain specific element styles and layout.
   z-index: -1;
   top: 0;
   width: 100%;
-  min-height: 100%;
+  height: 100vh;
   background-image: url(../assets/images/photos/image-header.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -470,6 +480,9 @@ Files inside this folder can contain specific element styles and layout.
   text-align: center;
   letter-spacing: 8px;
 }
+.section-title .section-title_content img {
+  width: 30px;
+}
 
 .section-main {
   display: grid;
@@ -481,18 +494,15 @@ Files inside this folder can contain specific element styles and layout.
      object-fit: cover;
 }
 .section-main .section-main_text {
-  max-width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
-  margin: 0;
+  margin: auto;
 }
 .section-main .section-main_text h2 {
   font-family: Fraunces;
-  text-align: center;
   color: hsl(212, 27%, 19%);
   margin-bottom: 40px;
   margin-top: 60px;
@@ -500,7 +510,6 @@ Files inside this folder can contain specific element styles and layout.
 .section-main .section-main_text p {
   font-family: Barlow;
   font-size: 18px;
-  text-align: center;
   color: hsl(232, 10%, 55%);
   font-weight: 800;
   line-height: 1.5;
