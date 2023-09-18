@@ -425,29 +425,32 @@ Files inside this folder can contain specific element styles and layout.
   height: 329px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
   background-color: hsl(0, 0%, 100%);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .header_burger-menu .burger_nav li {
   list-style: none;
-  padding: 10px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header_burger-menu .burger_nav li a {
   color: hsl(232, 10%, 55%);
   text-decoration: none;
   font-family: Barlow;
   font-size: 20px;
-}
-.header_burger-menu .burger_nav li:hover {
-  background-color: hsl(51, 100%, 49%);
-  border-radius: 25px;
+  padding: 10px 20px;
 }
 .header_burger-menu .burger_nav li:hover a {
   color: hsl(212, 27%, 19%);
   font-family: Fraunces;
   font-size: 15px;
+  background-color: hsl(51, 100%, 49%);
+  border-radius: 25px;
 }
 
 .section-title {
